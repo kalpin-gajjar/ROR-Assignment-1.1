@@ -1,0 +1,13 @@
+<div class="m-5">
+  <h4>Editing appointment</h4>
+  <hr>
+
+  <%= render "form", appointment: @appointment %>
+
+  <br>
+
+  <div>
+    <%= link_to "Show this appointment", @appointment %> |
+    <%= link_to "Back to appointments", appointments_path %>
+  </div>
+</div>

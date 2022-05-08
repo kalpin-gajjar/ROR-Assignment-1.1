@@ -1,0 +1,28 @@
+<div class="m-5">
+  <p style="color: green"><%= notice %></p>
+
+  <strong>Name:</strong>
+  <%= @patient.name %><br>
+
+  <strong>Email:</strong>
+  <%= @patient.email %><br>
+  <hr>
+
+  <strong>Your Appointments:</strong><br><br>
+  <% @patient.appointments.each do |appointment| %>
+    <strong>Appointment date:</strong>
+    <%= appointment.appointment_date %><br>
+    
+    <strong>Physician:</strong>
+    <%= Physician.find(appointment.physician_id).name %><br>
+    <hr>
+  <% end %>
+
+  <div class="my-2">
+    <%= link_to "Edit this patient", edit_patient_path(@patient) %> |
+    <%= link_to "Back to patients", patients_path %>
+    <hr>
+
+    <%= button_to "Destroy this patient", @patient, method: :delete, class:"my-2" %>
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="m-5">
+  <p style="color: green"><%= notice %></p>
+
+  <h4>Physicians</h4>
+  <hr>
+
+  <div id="physicians" class="d-flex flex-column">
+    <% @physicians.each do |physician| %>
+      <%= render physician %>
+      <hr>
+    <% end %>
+  </div>
+
+  <%= link_to "New physician", new_physician_path %>
+</div>

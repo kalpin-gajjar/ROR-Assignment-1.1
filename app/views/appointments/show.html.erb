@@ -1,0 +1,21 @@
+<div class="m-5">
+  <p style="color: green"><%= notice %></p>
+
+  <strong>Appointment date:</strong>
+  <%= @appointment.appointment_date %><br>
+
+  <strong>Patient:</strong>
+  <%= Patient.find(@appointment.patient_id).name %><br>
+
+  <strong>Physician:</strong>
+  <%= Physician.find(@appointment.physician_id).name %><br>
+  <hr>
+
+  <div class="my-2">
+    <%= link_to "Edit this appointment", edit_appointment_path(@appointment) %> |
+    <%= link_to "Back to appointments", appointments_path %>
+    <hr>
+
+    <%= button_to "Destroy this appointment", @appointment, method: :delete, class:"my-2" %>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="m-5">
+  <h4>Editing physician</h4>
+  <hr>
+
+  <%= render "form", physician: @physician %>
+
+  <br>
+
+  <div>
+    <%= link_to "Show this physician", @physician %> |
+    <%= link_to "Back to physicians", physicians_path %>
+  </div>
+</div>
